@@ -159,5 +159,8 @@ def main():
                     st.session_state.conversation = get_conversation_chain(vectorstore, api_key)
                     
                     st.success("Done! You can now ask questions.")
+        if st.button("Clear Conversation"):
+            st.session_state.chat_history = []
+            st.success("Conversation cleared.")
 if __name__ == "__main__":
     main()
