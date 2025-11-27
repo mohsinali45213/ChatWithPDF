@@ -1,0 +1,20 @@
+# --- Core ---
+python-dotenv
+streamlit
+PyPDF2
+
+# --- LangChain core / community / Google Gemini ---
+langchain>=0.2.0         # latest version!
+langchain-core>=0.2.0
+langchain-community>=0.2.0
+langchain-text-splitters>=0.2.0
+langchain-google-genai>=0.1.4  # latest Gemini for LangChain
+
+# --- Vector Store ---
+faiss-cpu                # RAG vector DB
+# faiss-gpu              # if you want GPU support
+
+# --- Extra (Optional but useful) ---
+tiktoken                 # Better token management
+pypdf                    # Alternative for PyPDF2 (faster)
+sentence-transformers    # For better embeddings (HuggingFace)
