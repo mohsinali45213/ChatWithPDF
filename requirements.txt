@@ -18,3 +18,4 @@ faiss-cpu                # RAG vector DB
 tiktoken                 # Better token management
 pypdf                    # Alternative for PyPDF2 (faster)
 sentence-transformers    # For better embeddings (HuggingFace)
+dotenv
