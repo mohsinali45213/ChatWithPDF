@@ -128,19 +128,15 @@ def main():
 
     # Sidebar
     with st.sidebar:
-        st.subheader("Configuration")
-        
-        api_key = st.text_input("Enter your Google Gemini API Key", type="password")
         st.subheader("Your documents")
         pdf_docs = st.file_uploader(
             "Upload PDFs here and click on 'Process'", accept_multiple_files=True
         )
 
         if st.button("Process"):
-            if not api_key: 
-                api_key = os.getenv("GEMINI_API_KEY")
+            api_key = os.getenv("GEMINI_API_KEY")
             if not api_key:
-                st.error("Please enter your API Key first.")
+                st.error("Please set GEMINI_API_KEY environment variable.")
                 return
             elif not pdf_docs:
                 st.error("Please upload at least one PDF.")
